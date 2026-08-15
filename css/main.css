@@ -19,16 +19,18 @@ header {
   text-align: center;
   padding: 20px;
   width: 100%;
+  background-color: #ffcb05;
+  margin-bottom: 20px;
 }
 
 .logo {
-  max-width: 220px;
-  margin-bottom: 15px;
+  max-width: 280px;
+  /* margin-bottom: 15px; */
 }
 
 header h2 {
   font-family: "Press Start 2P", cursive;
-  color: #ffcb05;
+  color: #2a3142;
 }
 /* Rules setting  */
 .rules {
