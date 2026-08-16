@@ -110,6 +110,12 @@ header h2 {
   font-weight: 600;
 }
 
+.pokemon-card-image {
+  width: 110px;
+  height: 110px;
+  object-fit: contain;
+}
+
 .versus {
   text-align: center;
   display: flex;
