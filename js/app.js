@@ -42,3 +42,11 @@ async function multiplePokemons() {
 }
 
 multiplePokemons();
+
+startBtn.addEventListener("click", () => {
+  if (startBtn.textContent === "Start Game") {
+    multiplePokemons();
+  } else {
+    gameStatus.textContent = "New will soon start";
+  }
+});
