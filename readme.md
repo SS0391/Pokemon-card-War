@@ -1,5 +1,9 @@
 # Pokemon Battle Card Game (Krig)
 
+## GitHub pages
+
+[https://ss0391.github.io/Pokemon-card-War/]
+
 ## Inspiration
 
 I use to play alot "Krig" card game when I was younger, so I got inspiration from that, to create this with the PokeApi
@@ -14,8 +18,8 @@ The Rules are simple and follow the the core mechanincs of the classic "Krig" ca
 4 **How to win a round** The game compares the Base Experience(XP) of both Pokemon, the one with the highest XP wins
 5 **Ties/Draw** If the both Pokemon thats i drawn has the same Base Experience, it is a tie and both cards are discarded
 6 **How to win the game** The game last for maximum 30 rounds!
-_ You or the computer wins if the other is out of cards
-_ If 30 rounds are reached, the player with the most cards left in their deck, wins. \* If the score is tied, it is a tie
+You or the computer wins if the other is out of cards
+If 30 rounds are reached, the player with the most cards left in their deck, wins. \* If the score is tied, it is a tie
 
 ## Technologies Used
 
