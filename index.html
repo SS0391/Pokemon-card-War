@@ -13,7 +13,7 @@
   <body>
     <header>
       <img src="images/pokemon-svgrepo-com.svg" alt="The Pokemon logo" class="logo" />
-      <h2>Pokemon Card Game</h2>
+      <h2>Pokemon Battle Game</h2>
     </header>
     <section class="rules">
       <h3>How to play?</h3>
@@ -24,5 +24,30 @@
         <li>The highest XP wins the round and takes both cards! In case of a tie, the cards are discarded.</li>
       </ul>
     </section>
+    <main class="game-container">
+      <section class="players">
+        <div class="card-slot" id="player-card">
+          <div class="card-placeholder">Player 1 card</div>
+        </div>
+        <div class="decks">
+          <h3>You</h3>
+          <p>Cards left: <span id="player-count">0</span></p>
+        </div>
+      </section>
+      <section class="versus">
+        <div class="vs-txt">VS</div>
+        <button id="start-btn" class="retro-btn">Play Round!</button>
+        <div id="loading">Loading...</div>
+      </section>
+      <section class="players">
+        <div class="card-slot" id="computer-card">
+          <div class="card-placeholder">Player 2 card</div>
+        </div>
+        <div class="decks">
+          <h3>Computer</h3>
+          <p>Cards left: <span id="computer-count">0</span></p>
+        </div>
+      </section>
+    </main>
   </body>
 </html>
