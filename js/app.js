@@ -118,7 +118,7 @@ const playRound = () => {
 
   // remove the top card in every deck
 
-  const playerCard = playerDeck.shift();
+  const playerCard = playerCard.shift();
   const computerDeck = computerDeck.shift();
 
   renderPokemonCard(playerCard, playerCardSlot);
