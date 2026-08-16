@@ -110,7 +110,7 @@ const playRound = () => {
     } else {
       gameStatus.textContent = "You lost! try again!";
     }
-    startBtn.textContent = "Play Round!";
+    startBtn.textContent = "Play a Round!";
     playerCardSlot.textContent = "Player 1 Card";
     computerCardSlot.textContent = "Player 2 card";
     return;
@@ -119,13 +119,13 @@ const playRound = () => {
   // remove the top card in every deck
 
   const playerCard = playerDeck.shift();
-  const computerDeck = computerDeck.shift();
+  const computerCard = computerDeck.shift();
 
   renderPokemonCard(playerCard, playerCardSlot);
-  renderPokemonCard(computerDeck, computerCardSlot);
+  renderPokemonCard(computerCard, computerCardSlot);
 
   const playerXp = playerCard.base_experience || 0;
-  const computerXp = computerCardSlot.base_experience || 0;
+  const computerXp = computerCard.base_experience || 0;
 
   if (playerXp > computerXp) {
     gameStatus.textContent = `You won this round! ${playerCard.name.toUpperCase()} (${playerXp} XP) beat ${computerCard.name.toUpperCase()} (${computerXp} XP)!`;
@@ -143,8 +143,9 @@ const playRound = () => {
 multiplePokemons();
 
 startBtn.addEventListener("click", () => {
-  if (startBtn.textContent === "Play Round!") {
+  if (startBtn.textContent === "Play a Round!") {
     multiplePokemons();
   } else {
+    playRound();
   }
 });
