@@ -184,3 +184,12 @@ header h2 {
   box-shadow: none;
 }
 /* Footer */
+
+footer {
+  text-align: center;
+  padding: 15px;
+  width: 100%;
+  background-color: #2a3142;
+  border-top: 4px solid #ffcb05;
+  margin-top: 45px;
+}
