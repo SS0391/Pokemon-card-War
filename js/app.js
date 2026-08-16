@@ -118,11 +118,26 @@ const playRound = () => {
 
   // remove the top card in every deck
 
-  const playerCard = playerCard.shift();
+  const playerCard = playerDeck.shift();
   const computerDeck = computerDeck.shift();
 
   renderPokemonCard(playerCard, playerCardSlot);
   renderPokemonCard(computerDeck, computerCardSlot);
+
+  const playerXp = playerCard.base_experience || 0;
+  const computerXp = computerCardSlot.base_experience || 0;
+
+  if (playerXp > computerXp) {
+    gameStatus.textContent = `You won this round! ${playerCard.name.toUpperCase()} (${playerXp} XP) beat ${computerCard.name.toUpperCase()} (${computerXp} XP)!`;
+    playerDeck.push(playerCard, computerCard);
+  } else if (computerXp > playerXp) {
+    gameStatus.textContent = `The computer won this round... auch! ${computerCard.name.toUpperCase()} (${computerXp} XP) beat ${playerCard.name.toUpperCase()} (${playerXp} XP).`;
+  } else {
+    gameStatus.textContent = `Its a tie! Both players had ${playerXp} XPP. The cards were discarded! `;
+  }
+
+  playerCountTxt.textContent = playerDeck.length;
+  computerCountTxt.textContent = computerDeck.length;
 };
 
 multiplePokemons();
