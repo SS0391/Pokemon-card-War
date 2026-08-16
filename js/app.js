@@ -97,7 +97,7 @@ async function multiplePokemons() {
 
   // Start btn getting prepared
   gameStatus.textContent = "Players have their Pokemonss! Lets get ready to rumble!";
-  startBtn.textContent = "Play a round!";
+  startBtn.textContent = "Start Game";
   startBtn.disabled = false;
 
   // check if I get a pictures and stats from the api
@@ -110,7 +110,7 @@ const playRound = () => {
     } else {
       gameStatus.textContent = "You lost! try again!";
     }
-    startBtn.textContent = "Play a Round!";
+    startBtn.textContent = "Play New Game!";
     playerCardSlot.textContent = "Player 1 Card";
     computerCardSlot.textContent = "Player 2 card";
     return;
@@ -132,6 +132,7 @@ const playRound = () => {
     playerDeck.push(playerCard, computerCard);
   } else if (computerXp > playerXp) {
     gameStatus.textContent = `The computer won this round... auch! ${computerCard.name.toUpperCase()} (${computerXp} XP) beat ${playerCard.name.toUpperCase()} (${playerXp} XP).`;
+    computerDeck.push(playerCard, computerCard);
   } else {
     gameStatus.textContent = `Its a tie! Both players had ${playerXp} XPP. The cards were discarded! `;
   }
