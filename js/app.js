@@ -11,7 +11,7 @@ const gameStatus = document.querySelector("#loading");
 const startBtn = document.querySelector("#start-btn");
 
 const playerCardSlot = document.querySelector("#player-card");
-const computerCardSlot = document.querySelector("#cpu-card");
+const computerCardSlot = document.querySelector("#computer-card");
 // Function to make it possible to render Pokemon cards
 
 const renderPokemonCard = (pokemon, cardSlotsE) => {
@@ -101,16 +101,35 @@ async function multiplePokemons() {
   startBtn.disabled = false;
 
   // check if I get a pictures and stats from the api
-  renderPokemonCard(playerDeck[0], playerCardSlot);
-  renderPokemonCard(computerDeck[0], computerCardSlot);
 }
+
+const playRound = () => {
+  if (playerDeck.length === 0 || computerDeck.length === 0) {
+    if (playerDeck.length > computerDeck.length) {
+      gameStatus.textContent = "You won! lets go!";
+    } else {
+      gameStatus.textContent = "You lost! try again!";
+    }
+    startBtn.textContent = "Play Round!";
+    playerCardSlot.textContent = "Player 1 Card";
+    computerCardSlot.textContent = "Player 2 card";
+    return;
+  }
+
+  // remove the top card in every deck
+
+  const playerCard = playerDeck.shift();
+  const computerDeck = computerDeck.shift();
+
+  renderPokemonCard(playerCard, playerCardSlot);
+  renderPokemonCard(computerDeck, computerCardSlot);
+};
 
 multiplePokemons();
 
 startBtn.addEventListener("click", () => {
-  if (startBtn.textContent === "Play Round") {
+  if (startBtn.textContent === "Play Round!") {
     multiplePokemons();
   } else {
-    gameStatus.textContent = "New round will soon start";
   }
 });
