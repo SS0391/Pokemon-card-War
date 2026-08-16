@@ -13,17 +13,9 @@
   <body>
     <header>
       <img src="images/pokemon-svgrepo-com.svg" alt="The Pokemon logo" class="logo" />
-      <h2>Pokemon Battle Game</h2>
+      <h2>Card Battle Game</h2>
     </header>
-    <section class="rules">
-      <h3>How to play?</h3>
-      <ul>
-        <li>Push the <strong>Start Game</strong> to get 20 random Pokemons from the PokeApi</li>
-        <li>You and the CPU will be dealt 10 hidden cards each</li>
-        <li>Each round compares the <strong>Base Experience (XP)</strong> of the active cards.</li>
-        <li>The highest XP wins the round and takes both cards! In case of a tie, the cards are discarded.</li>
-      </ul>
-    </section>
+
     <main class="game-container">
       <section class="players">
         <div class="card-slot" id="player-card">
@@ -49,5 +41,16 @@
         </div>
       </section>
     </main>
+    <section class="rules">
+      <h3>How to play?</h3>
+      <ul>
+        <li>Push the <strong>Start Game</strong> to get 20 random Pokemons from the PokeApi</li>
+        <li>You and the CPU will be dealt 10 hidden cards each</li>
+        <li>Each round compares the <strong>Base Experience (XP)</strong> of the active cards.</li>
+        <li>The highest XP wins the round and takes both cards! In case of a tie, the cards are discarded.</li>
+        <li>The game has 30 rounds</li>
+        <li>If the score is the same after 30 rounds it ends in a tie!</li>
+      </ul>
+    </section>
   </body>
 </html>
